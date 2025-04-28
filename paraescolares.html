@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COBAT 03 - Actividades Paraescolares</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #d1b787;
+      background-image: url('assets/fondo.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .navbar {
+      background-color: #582671;
+    }
+    .navbar-nav .nav-link, .navbar-brand {
+      color: #fff !important;
+      font-weight: bold;
+    }
+    header {
+      background-image: url('assets/banner-paraescolares.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(88, 38, 113, 0.7);
+    }
+    .header-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #fff;
+      padding-top: 100px;
+    }
+    .contenido {
+      padding: 50px 20px;
+      text-align: center;
+      color: #333;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin: 50px;
+      border-radius: 20px;
+    }
+    .actividad-card {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      transition: transform 0.3s;
+      border: 1px solid rgba(88, 38, 113, 0.1);
+    }
+    .actividad-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(88, 38, 113, 0.2);
+    }
+    .actividad-img img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .actividad-body {
+      padding: 20px;
+    }
+    .actividad-title {
+      color: #582671;
+      margin-bottom: 15px;
+    }
+    .actividad-footer {
+      background-color: rgba(88, 38, 113, 0.05);
+      padding: 15px;
+      text-align: center;
+    }
+    .beneficio-item {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #d1b787;
+    }
+    footer {
+      background-color: #582671;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar (igual que index.html) -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">COBAT 03</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon" style="background-color:white;"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="paraescolares.html">Paraescolares</a></li>
+        <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+        <li class="nav-item"><a class="nav-link" href="acerca.html">Acerca de Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="oferta.html">Oferta Académica</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Banner -->
+<header>
+  <div class="header-content">
+    <h1>Actividades Paraescolares</h1>
+    <p>Desarrollo integral más allá del aula</p>
+  </div>
+</header>
+
+<!-- Contenido principal -->
+<div class="contenido">
+  <p class="lead">Fomentamos el desarrollo integral de nuestros estudiantes a través de actividades deportivas, culturales y artísticas.</p>
+  
+  <div class="row mt-4">
+    <div class="col-md-4">
+      <div class="actividad-card">
+        <div class="actividad-img">
+          <img src="assets/deportes.jpg" alt="Deportes">
+        </div>
+        <div class="actividad-body">
+          <h3 class="actividad-title">Deportes</h3>
+          <p>Fútbol, voleibol, atletismo y más.</p>
+          <ul class="text-start">
+            <li>Equipos competitivos</li>
+            <li>Torneos internos</li>
+            <li>Participación en eventos estatales</li>
+          </ul>
+        </div>
+        <div class="actividad-footer">
+          <a href="#" class="btn btn-outline-primary">Horarios</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="actividad-card">
+        <div class="actividad-img">
+          <img src="assets/cultura.jpg" alt="Cultura">
+        </div>
+        <div class="actividad-body">
+          <h3 class="actividad-title">Actividades Culturales</h3>
+          <p>Teatro, danza, oratoria y música.</p>
+          <ul class="text-start">
+            <li>Talleres semanales</li>
+            <li>Presentaciones públicas</li>
+            <li>Festivales anuales</li>
+          </ul>
+        </div>
+        <div class="actividad-footer">
+          <a href="#" class="btn btn-outline-primary">Horarios</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="actividad-card">
+        <div class="actividad-img">
+          <img src="assets/arte.jpg" alt="Arte">
+        </div>
+        <div class="actividad-body">
+          <h3 class="actividad-title">Arte y Creatividad</h3>
+          <p>Pintura, escultura, y fotografía.</p>
+          <ul class="text-start">
+            <li>Exposiciones estudiantiles</li>
+            <li>Visitas a museos</li>
+            <li>Talleres con artistas locales</li>
+          </ul>
+        </div>
+        <div class="actividad-footer">
+          <a href="#" class="btn btn-outline-primary">Horarios</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-5">
+    <h3>Beneficios de las actividades paraescolares</h3>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="beneficio-item">
+          <h4>Desarrollo cognitivo</h4>
+          <p>Mejora de habilidades de pensamiento</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="beneficio-item">
+          <h4>Salud física</h4>
+          <p>Promoción de hábitos saludables</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="beneficio-item">
+          <h4>Habilidades sociales</h4>
+          <p>Trabajo en equipo y comunicación</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="beneficio-item">
+          <h4>Autoestima</h4>
+          <p>Confianza en las capacidades propias</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 COBAT 03. Todos los derechos reservados.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

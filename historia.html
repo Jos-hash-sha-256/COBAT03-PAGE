@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COBAT 03 - Nuestra Historia</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #d1b787;
+      background-image: url('assets/fondo.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .navbar {
+      background-color: #582671;
+    }
+    .navbar-nav .nav-link, .navbar-brand {
+      color: #fff !important;
+      font-weight: bold;
+    }
+    header {
+      background-image: url('assets/banner-historia.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(88, 38, 113, 0.7);
+    }
+    .header-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #fff;
+      padding-top: 100px;
+    }
+    .contenido {
+      padding: 50px 20px;
+      text-align: center;
+      color: #333;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin: 50px;
+      border-radius: 20px;
+    }
+    .timeline {
+      position: relative;
+      padding-left: 50px;
+      margin: 30px 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: #582671;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .timeline-date {
+      position: absolute;
+      left: -50px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #582671;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .timeline-content {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 3px solid #d1b787;
+    }
+    footer {
+      background-color: #582671;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar (igual que index.html) -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">COBAT 03</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon" style="background-color:white;"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="paraescolares.html">Paraescolares</a></li>
+        <li class="nav-item"><a class="nav-link active" href="historia.html">Historia</a></li>
+        <li class="nav-item"><a class="nav-link" href="acerca.html">Acerca de Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="oferta.html">Oferta Académica</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Banner -->
+<header>
+  <div class="header-content">
+    <h1>Nuestra Historia</h1>
+    <p>Una tradición de excelencia educativa</p>
+  </div>
+</header>
+
+<!-- Contenido principal -->
+<div class="contenido">
+  <div class="row align-items-center">
+    <div class="col-md-6 text-start">
+      <h2>Nuestros inicios</h2>
+      <p class="lead">Desde nuestra fundación en 1985, COBAT 03 ha sido un referente de calidad educativa en la región.</p>
+      <p>A lo largo de los años, hemos formado a generaciones de estudiantes comprometidos con su entorno, impulsando valores, conocimiento y liderazgo.</p>
+    </div>
+    <div class="col-md-6">
+      <img src="assets/historia.jpg" class="img-fluid rounded shadow" alt="Nuestra historia">
+    </div>
+  </div>
+  
+  <div class="mt-5">
+    <h3>Línea de tiempo</h3>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">1985</div>
+        <div class="timeline-content">
+          <h4>Fundación</h4>
+          <p>Creación del COBAT 03 con 3 grupos y 120 estudiantes</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">1995</div>
+        <div class="timeline-content">
+          <h4>Primera expansión</h4>
+          <p>Construcción de nuevas aulas y laboratorios</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2008</div>
+        <div class="timeline-content">
+          <h4>Certificación de calidad</h4>
+          <p>Obtención del reconocimiento como escuela de excelencia</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2020</div>
+        <div class="timeline-content">
+          <h4>Modernización</h4>
+          <p>Implementación de tecnologías educativas de vanguardia</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 COBAT 03. Todos los derechos reservados.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
