@@ -1,194 +1,349 @@
 /* Estilos generales */
 body {
-    background-color: #d1b787;
-    background-image: url('../assets/fondo.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  /* Navbar */
-  .navbar {
-    background-color: #582671;
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar-brand {
-    font-size: 1.8rem;
-  }
-  
-  .navbar-nav .nav-link {
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
-    transition: all 0.3s;
-  }
-  
-  .navbar-nav .nav-link:hover {
-    color: #d1b787 !important;
-  }
-  
-  /* Banners */
-  .banner, .sub-banner {
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    position: relative;
-  }
-  
-  .banner {
-    background-image: url('../assets/banner.jpg');
-  }
-  
-  .sub-banner {
-    background-image: url('../assets/banner-sub.jpg');
-  }
-  
-  .banner-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(88, 38, 113, 0.7);
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Contenido principal */
-  .main-content {
-    padding: 60px 0;
-  }
-  
-  .content-card {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    padding: 30px;
-    color: #333;
-  }
-  
-  /* Cards específicas */
-  .feature-card {
-    background-color: white;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .feature-icon {
-    font-size: 2.5rem;
+  background-color: #d1b787;
+  background-image: url('assets/fondo.jpg'); /* Asegúrate que la ruta sea correcta */
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el footer quede abajo */
+}
+
+main {
+  flex: 1; /* Permite que el main crezca y empuje el footer */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #582671;
+  padding: 10px 0; /* Ajuste ligero del padding */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: #fff; /* Color blanco directo */
+  font-weight: bold;
+  font-size: 1.5rem; /* Tamaño ajustado */
+}
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: #eee; /* Ligero cambio al pasar el mouse/focus */
+}
+
+.navbar-nav .nav-link {
+  color: #fff; /* Color blanco directo */
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #d1b787; /* Cambio de color al pasar el mouse/focus */
+}
+
+.navbar-nav .nav-link.active {
+  color: #d1b787; /* Color para el enlace activo */
+  font-weight: bold; /* Podrías querer un estilo diferente */
+}
+
+/* Estilo para el icono del toggler */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3); /* Borde más suave */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* Header / Banner Principal */
+header {
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Altura estándar */
+  position: relative;
+  display: flex; /* Para centrar contenido */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+/* Diferentes imágenes de fondo para cada header */
+/* (Asegúrate que las rutas sean correctas desde la raíz o donde esté styles.css) */
+body.page-index header { background-image: url('assets/banner.jpg'); }
+body.page-acerca header { background-image: url('assets/banner-acerca.jpg'); }
+body.page-historia header { background-image: url('assets/banner-historia.jpg'); }
+body.page-oferta header { background-image: url('assets/banner-oferta.jpg'); }
+body.page-paraescolares header { background-image: url('assets/banner-paraescolares.jpg'); }
+
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(88, 38, 113, 0.7); /* Morado semi-transparente */
+  z-index: 1; /* Detrás del contenido */
+}
+
+.header-content {
+  position: relative;
+  z-index: 2; /* Encima de la superposición */
+  padding: 20px; /* Añade padding para que no toque los bordes */
+}
+
+.school-logo {
+  max-height: 120px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}
+
+.header-content h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.header-content p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+/* Contenido principal y tarjetas */
+.contenido {
+  padding: 50px 20px;
+  text-align: center;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.85); /* Ligeramente más opaco */
+  margin: 40px auto; /* Centrado y con margen */
+  border-radius: 15px; /* Bordes redondeados */
+  max-width: 1140px; /* Ancho máximo similar a container-lg o xl */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos comunes para cards (puedes ajustar según necesidad) */
+.info-card { /* Clase genérica para las cards de contenido */
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+  opacity: 0; /* Para animación JS */
+  transform: translateY(20px); /* Para animación JS */
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(88, 38, 113, 0.15);
+}
+
+/* Estilos específicos por página (si es necesario refinar) */
+
+/* Acerca de Nosotros */
+.about-card { /* Misión y Visión */
+    border-top: 4px solid #582671;
+}
+.value-item { /* Valores */
+    border-left: 4px solid #d1b787;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+/* Oferta Académica */
+.programa-card {
+    border-top: 4px solid #582671;
+}
+.programa-title {
     color: #582671;
-  }
-  
-  .about-card {
-    background-color: white;
-    border-radius: 10px;
-    transition: all 0.3s;
-  }
-  
-  .about-card:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .about-icon {
-    font-size: 2rem;
-    color: #582671;
-    text-align: center;
-  }
-  
-  /* Timeline */
-  .timeline {
+    border-bottom: 1px solid #d1b787;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.programa-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: left; /* Alinear lista a la izquierda */
+}
+.programa-list li {
     position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .timeline::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background-color: #582671;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -1px;
-  }
-  
-  .timeline-item {
-    padding: 10px 40px;
-    position: relative;
-    width: 50%;
-    box-sizing: border-box;
-  }
-  
-  .timeline-item:nth-child(odd) {
-    left: 0;
-  }
-  
-  .timeline-item:nth-child(even) {
-    left: 50%;
-  }
-  
-  .timeline-date {
-    padding: 8px 15px;
-    background-color: #582671;
-    color: white;
-    border-radius: 20px;
+    padding-left: 1.5em; /* Espacio para el bullet */
+    margin-bottom: 0.5em;
+}
+.programa-list li::before {
+    content: "•";
+    color: #d1b787;
     font-weight: bold;
     display: inline-block;
-    margin-bottom: 10px;
-  }
-  
-  .timeline-content {
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+/* Paraescolares */
+.actividad-card {
+    overflow: hidden;
+    border: 1px solid rgba(88, 38, 113, 0.1);
+}
+.actividad-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.actividad-body {
     padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Footer */
-  .footer {
+}
+.actividad-title {
+    color: #582671;
+    margin-bottom: 15px;
+}
+.actividad-footer {
+    background-color: rgba(88, 38, 113, 0.05);
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid rgba(88, 38, 113, 0.1);
+}
+.beneficio-item {
+    border-bottom: 3px solid #d1b787;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+/* Historia - Timeline */
+.timeline {
+    position: relative;
+    padding-left: 50px; /* Espacio para los círculos de fecha */
+    margin: 30px auto; /* Centrar timeline si es necesario */
+    max-width: 800px; /* Limitar ancho */
+}
+.timeline::before { /* Línea vertical */
+    content: '';
+    position: absolute;
+    left: 20px; /* Alineado con el centro de los círculos */
+    top: 10px; /* Ajuste para empezar */
+    bottom: 10px; /* Ajuste para terminar */
+    width: 3px;
+    background-color: #582671;
+    border-radius: 2px;
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px; /* Más espacio entre items */
+}
+.timeline-item:last-child {
+    margin-bottom: 0; /* Sin margen inferior para el último */
+}
+.timeline-date { /* Círculo de fecha */
+    position: absolute;
+    left: 0; /* Alineado a la izquierda */
+    top: 0; /* Alineado arriba del contenido */
+    transform: translateX(-50%); /* Centrar el círculo en la línea */
+    margin-left: 21.5px; /* Ajustar para que quede sobre la línea */
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
     background-color: #582671;
     color: white;
-  }
-  
-  .footer a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .footer a:hover {
-    color: #d1b787;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .timeline::before {
-      left: 31px;
-    }
-    
-    .timeline-item {
-      width: 100%;
-      padding-left: 70px;
-      padding-right: 25px;
-    }
-    
-    .timeline-item:nth-child(even) {
-      left: 0;
-    }
-    
-    .banner, .sub-banner {
-      height: 300px;
-    }
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9em;
+    border: 3px solid #d1b787; /* Borde opcional */
+    z-index: 1; /* Encima de la línea */
+}
+.timeline-content { /* Contenido del evento */
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #d1b787; /* Borde izquierdo */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+/* Footer */
+footer {
+  background-color: #582671;
+  color: white;
+  padding: 25px 0; /* Más padding */
+  text-align: center;
+  margin-top: auto; /* Empuja el footer al final */
+}
+
+footer p {
+    margin-bottom: 0; /* Quitar margen inferior del párrafo */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
     .header-content h1 {
-      font-size: 2rem;
+        font-size: 2.4rem;
     }
+    .header-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 350px;
   }
+  .header-content h1 {
+      font-size: 2rem;
+  }
+   .header-content p {
+        font-size: 1rem;
+    }
+  .school-logo {
+    max-height: 80px;
+  }
+  .contenido {
+    margin: 20px;
+    padding: 30px 15px;
+  }
+  /* Ajustes Timeline para móviles */
+   .timeline {
+        padding-left: 60px; /* Más espacio para contenido */
+   }
+   .timeline::before {
+        left: 30px; /* Mover línea */
+   }
+   .timeline-date {
+       left: 30px; /* Mover circulo */
+       transform: translateX(-50%);
+       margin-left: 0; /* Resetear margen */
+       width: 40px;
+       height: 40px;
+       font-size: 0.8em;
+   }
+   .timeline-content {
+       margin-left: 15px; /* Pequeño margen */
+   }
+}
+
+@media (max-width: 576px) {
+     .navbar-brand {
+        font-size: 1.3rem;
+     }
+     header {
+        height: 300px;
+     }
+     .header-content h1 {
+        font-size: 1.8rem;
+     }
+      .header-content p {
+        font-size: 0.9rem;
+    }
+     .school-logo {
+        max-height: 60px;
+     }
+     .value-item, .beneficio-item {
+         text-align: center;
+     }
+}
