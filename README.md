@@ -4,7 +4,7 @@
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3+-purple)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-green)
 
-Sitio web oficial del Colegio de Bachilleres del Estado de [Tu Estado] Plantel 03 (COBAT 03).
+Sitio web no oficial del Colegio de Bachilleres del Estado de Tlax Plantel 03 (COBAT 03).
 
 ## 🚀 Características principales
 
