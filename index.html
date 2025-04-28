@@ -1,123 +1,71 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>COBAT 03 - Inicio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #d1b787;
-      background-image: url('assets/fondo.jpg'); /* Fondo general */
-      background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-    .navbar {
-      background-color: #582671;
-    }
-    .navbar-nav .nav-link, .navbar-brand {
-      color: #fff !important;
-      font-weight: bold;
-    }
-    header {
-      background-image: url('assets/banner.jpg'); /* Aquí colocas tu imagen del header */
-      background-size: cover;
-      background-position: center;
-      height: 400px;
-      position: relative;
-    }
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: rgba(88, 38, 113, 0.7); /* Morado semi-transparente */
-    }
-    .header-content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      color: #fff;
-      padding-top: 80px;
-    }
-    .school-logo {
-      max-height: 120px;
-      margin-bottom: 20px;
-      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
-    }
-    .contenido {
-      padding: 50px 20px;
-      text-align: center;
-      color: #333;
-      background-color: rgba(255, 255, 255, 0.8);
-      margin: 50px;
-      border-radius: 20px;
-    }
-    footer {
-      background-color: #582671;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    @media (max-width: 768px) {
-      .header-content {
-        padding-top: 60px;
-      }
-      .school-logo {
-        max-height: 80px;
-      }
-      header {
-        height: 350px;
-      }
-    }
-  </style>
-</head>
-<body>
+<!DOCTYPE html> <html lang="es"> <head>
+  <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>COBAT 03 - Inicio</title> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">COBAT 03</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon" style="background-color:white;"></span>
-    </button>
+  <link href="styles.css" rel="stylesheet">
+
+  </head>
+<body class="page-index"> <nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container"> <a class="navbar-brand" href="index.html">COBAT 03</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span> </button>
+
     <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
         <li class="nav-item"><a class="nav-link" href="paraescolares.html">Paraescolares</a></li>
         <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
         <li class="nav-item"><a class="nav-link" href="acerca.html">Acerca de Nosotros</a></li>
         <li class="nav-item"><a class="nav-link" href="oferta.html">Oferta Académica</a></li>
       </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Banner con imagen de fondo -->
-<header>
-  <div class="header-content">
-    <!-- Logo escolar agregado aquí -->
-    <img src="assets/logo-colegio.png" alt="Logo COBAT 03" class="school-logo">
+    </div> </div> </nav> <header>
+  <div class="header-content"> <img src="assets/logo-colegio.png" alt="Logo COBAT 03 Calpulalpan" class="school-logo">
     <h1>Bienvenido a COBAT 03</h1>
     <p>Educando para el futuro</p>
-  </div>
-</header>
+  </div> </header> <main class="container">
+  <section class="contenido">
+    <h2>Descubre todo lo que COBAT 03 tiene para ti</h2>
+    <p class="lead">Formamos líderes comprometidos con la sociedad a través de una educación de calidad.</p>
 
-<!-- Contenido principal -->
-<div class="contenido">
-  <h2>Descubre todo lo que COBAT 03 tiene para ti</h2>
-  <p>Formamos líderes comprometidos con la sociedad a través de una educación de calidad.</p>
-</div>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="info-card text-center">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#582671" class="bi bi-book-fill mb-3" viewBox="0 0 16 16">
+                    <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                </svg>
+                <h3>Oferta Académica</h3>
+                <p>Explora nuestros programas educativos diseñados para tu éxito.</p>
+                <a href="oferta.html" class="btn btn-outline-primary" aria-label="Ver Oferta Académica">Ver Oferta</a>
+            </div> </div> <div class="col-md-4">
+            <div class="info-card text-center">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#582671" class="bi bi-people-fill mb-3" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                </svg>
+                <h3>Vida Estudiantil</h3>
+                <p>Descubre las actividades paraescolares que enriquecen tu experiencia.</p>
+                 <a href="paraescolares.html" class="btn btn-outline-primary" aria-label="Ver Actividades Paraescolares">Ver Actividades</a>
+            </div>
+        </div> <div class="col-md-4">
+            <div class="info-card text-center">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#582671" class="bi bi-info-circle-fill mb-3" viewBox="0 0 16 16">
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                </svg>
+                <h3>Conócenos</h3>
+                <p>Aprende sobre nuestra historia, misión y valores institucionales.</p>
+                 <a href="acerca.html" class="btn btn-outline-primary" aria-label="Conocer más Acerca de Nosotros">Saber Más</a>
+            </div>
+        </div> </div> </section> </main> <footer>
+  <div class="container"> <p>© <span id="year"></span> COBAT 03 Calpulalpan. Todos los derechos reservados.</p>
+    </div> </footer> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Footer -->
-<footer>
-  <p>© 2025 COBAT 03. Todos los derechos reservados.</p>
-</footer>
+<script src="scripts.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+<script>
+  // Busca el elemento con id="year" y establece su contenido de texto al año actual.
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body> </html> ```
+
+Espero que estos comentarios te ayuden a entender mejor la estructura y función de cada parte del código `index.html`.
