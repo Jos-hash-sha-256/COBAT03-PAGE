@@ -6,9 +6,9 @@
 
 Sitio web no oficial del Colegio de Bachilleres del Estado de Tlax Plantel 03 (COBAT 03).
 ## Integrantes 🚀
--José Gabriel
--Francisco Uriel
--Ángel Macías 604
+-José Gabriel Elizalde
+-Francisco Uriel Hernández Gutiérrez
+-José Ángel Macías Hernandez 604
 
 ## 🚀 Características principales
 
