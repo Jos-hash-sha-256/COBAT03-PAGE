@@ -5,6 +5,10 @@
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-green)
 
 Sitio web no oficial del Colegio de Bachilleres del Estado de Tlax Plantel 03 (COBAT 03).
+## Integrantes 🚀
+-José Gabriel
+-Francisco Uriel
+-Ángel Macías 604
 
 ## 🚀 Características principales
 
