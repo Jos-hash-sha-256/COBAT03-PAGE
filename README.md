@@ -18,6 +18,10 @@ Sitio web no oficial del Colegio de Bachilleres del Estado de Tlax Plantel 03 (C
 - ⚡ Integración con Bootstrap 5
 - 🧩 Estructura modular y fácil de mantener
 
+##Copyright ✨
+-Copyright © JoseGhDark-commits 2025. Todos los derechos reservados.
+-Este proyecto no puede ser copiado, distribuido, modificado ni usado sin el permiso explícito del autor.
+
 ## 📂 Estructura del proyecto
 
 ```bash
